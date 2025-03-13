@@ -1,91 +1,129 @@
 *{
-  margin: 0;
+  marginm: 0;
   padding: 0;
-  font-family: 'poppins', Sans-Serif;
-  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;  
+  box-sizing: border-box ;
 }
+
 body{
   background: #080808;
   color: #fff;
 }
+
 #header{
   width: 100%;
   height: 100vh;
-  background-image: url('images/jahom.png');
-  background-size: cover;
+  background-image: url(images\background.png);
+  background-size: cover; 
   background-position: center;
 }
+
 .container{
   padding: 10px 10%;
+
 }
+
 nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .logo{
   width: 140px;
 }
+
 nav ul li{
   display: inline-block;
   list-style: none;
   margin: 10px 20px;
 }
+
 nav ul li a{
   color: #fff;
   text-decoration: none;
-  font-size:18px;
+  font-size: 18px;
   position: relative;
 }
+
 nav ul li a::after{
   content: '';
-  width: 0%;
+  width: 100%;
   height: 3px;
   background: #ff004f;
   position: absolute;
   left: 0;
-  left: 0;
   bottom: -6px;
   transition: 0.5s;
+
 }
+
 nav ul li a:hover::after{
   width: 100%;
 }
+
 .header-text{
   margin-top: 20%;
+  font-size: 30px; 
 }
+
 .header-text h1{
   font-size: 60px;
   margin-top: 20px;
 }
-.header-text h1 span{
-  color: #ff004f;
-}
-.styled-image {
-  /* Width and Height */
-  width: 700px; /* Fixed width */
-  height: 60px; /* Fixed height */
-  max-width: 100%; /* Responsive: won't exceed container width */
-  height: 50px; /* Maintains aspect ratio */
 
-  /* Borders */
-  border: 2px solid black; /* Simple border */
-  border-radius: 10px; /* Rounded corners */
-  
-  /* Padding and Margin */
-  padding: 10px; /* Space inside the border */
-  margin: 20px; /* Space outside the image */
-  
-  /* Positioning */
-  display: block; /* Removes inline spacing */
-  margin-left: auto; /* Centers horizontally */
-  margin-right: auto;
-  
-  /* Effects */
-  opacity: 0.8; /* Transparency (0 to 1) */
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow */
-  
-  /* Object Fit (for resizing behavior) */
-  object-fit: cover; /* Crops to fill dimensions */
+.header-text h1 span{
+  color: #ff004f ;
+}
+
+/* ---------about--------- */
+#about{
+  padding: flex;
+  color: #ababab;
+}
+.row{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1{
+  flex-basis: 35%;
+}
+.about-col-1 img{
+  width: 100%;
+  height: 65%;
+  border-radius: 15px;
+}
+.about-col-2{
+  flex-basis: 60%;
+}
+.sub-title{
+  font-size: 60px;
+  font-weight: 600;
+  color:#fff;
+}
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links{
+  margin-right:50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after{
+  content:'';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active::after{
+  width: 50%;
 }
