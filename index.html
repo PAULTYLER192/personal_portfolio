@@ -1,67 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAUL OGONYO</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paul Ogonyo - Backend Developer Portfolio</title>
+    <meta name="description" content="Paul Ogonyo is a backend developer and AI enthusiast with expertise in Python, Java, Node.js, Django, and machine learning." />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
 
+    <!-- Header Section -->
     <header id="header">
       <div class="container">
         <nav>
-          <img src="images/logo.png" class="logo" alt="Paul Ogonyo Logo">
+          <img src="images/logo.png" class="logo" alt="Paul Ogonyo Logo" />
           <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">PORTFOLIO</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#header">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
-        <div class="header-text">
+        <section class="header-text">
           <p>BACKEND DEVELOPER</p>
-          <h1>Hola, I'm <span>Paul</span> <br>Ogonyo From Kenya</h1>
-        </div>
+          <h1>Hola, I'm <span>Paul</span> <br />Ogonyo From Kenya</h1>
+        </section>
       </div>
     </header>
 
-    <div id="about">
-    <div class="container">
-      <div class="row">
-        <div class="about-col-1">
-          <img src="images/the_one.png" class="the_one">
+   <!-- About Section -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="images/the_oneV.png" class="the_one" alt="Paul Ogonyo Picture" />
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>
+          I’m a passionate backend developer and AI enthusiast pursuing a BSc in Computer Science 
+          at Egerton University. With skills in Python, Java, Node.js, and Django, I specialize in 
+          building scalable web solutions. I’m also leading AgriSense, an AI-powered agricultural platform.
+        </p>
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+          <p class="tab-links" onclick="openTab('experience')">Experience</p>
+          <p class="tab-links" onclick="openTab('education')">Education</p>
         </div>
-        <div class="about-col-2">
-          <h1 class="sub-title">About Me</h1>
-          <p>I’m a passionate backend developer and AI enthusiast pursuing a BSc in Computer Science 
-            at Egerton University. With skills in Python, Java, Node.js, and Django, I specialize in 
-            building scalable web solutions. I’m also leading AgriSense, an AI-powered agricultural platform,
-             while exploring machine learning and blockchain. I strive to create impactful tech solutions and 
-             am open to collaborations and freelance opportunities.</p>
-
-             <div class="tab-titles">
-              <p class="tab-links active-link">Skills</p>
-              <p class="tab-links">Experience</p>
-              <p class="tab-links">Education</p>
-             </div>
-             <div class="tab-contents">
-              <ul>
-                <li><span>Web Development</span><br>Backend Development using Django or Node.js&#40;Express.js&#40;<br>REST API Development</li>
-                <li><span>Databases</span><br>MySQL, PostgreSQL, SQLite, MongoDB</li>
-                <li><span>Machine Learning</span><br>Python&#40;NumPy,Pandas&#40;,Matplotlib&#40;Data Visualization&#40;,Scikit-learn&#40;Basic ML models.</li>
-                <li><span>Other Skills</span><br>Git & GitHub,API integration,Problem solving</li>
-              </ul>
-             </div>
+        <!-- Tab Content -->
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Web Development:</span> Backend Development using Django or Node.js (Express.js), REST API Development</li>
+            <li><span>Databases:</span> MySQL, PostgreSQL, SQLite, MongoDB</li>
+            <li><span>Machine Learning:</span> Python (NumPy, Pandas, Matplotlib, Scikit-learn)</li>
+            <li><span>Other Skills:</span> Git & GitHub, API Integration, Problem Solving</li>
+          </ul>
         </div>
-
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>AgriSense:</span> Leading an AI-powered agricultural platform</li>
+            <li><span>Freelance Projects:</span> Developed REST APIs and backend systems for small businesses</li>
+            <li><span>Open Source:</span> Contributed to GitHub repositories in Python and Java</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>BSc in Computer Science:</span> Egerton University (Current)</li>
+            <li><span>Self-Learning:</span> Backend development, machine learning, and blockchain</li>
+          </ul>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+
+    
+   <!-- Services Section -->
+<section id="services">
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+      <!-- Backend Development Service -->
+      <div class="service-card">
+        <i class="fas fa-code"></i>
+        <h2>Backend Development</h2>
+        <p>Building robust and scalable backend solutions using Django, Node.js, and Express.js. RESTful APIs, database design, and security implementation.</p>
+      </div>
+
+      <!-- Machine Learning Service -->
+      <div class="service-card">
+        <i class="fas fa-brain"></i>
+        <h2>Machine Learning</h2>
+        <p>Developing predictive models, data analysis, and AI-based solutions using Python (Scikit-learn, TensorFlow, NumPy).</p>
+      </div>
+
+      <!-- API Integration Service -->
+      <div class="service-card">
+        <i class="fas fa-plug"></i>
+        <h2>API Integration</h2>
+        <p>Seamless integration of third-party APIs and microservices to enhance functionality and performance.</p>
+      </div>
     </div>
+  </div>
+</section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <p>Coming soon... 👨‍💻</p>
+      </div>
+    </section>
+
+   <!-- Contact Section -->
+<section id="contact">
+  <div class="container">
+    <h1 class="sub-title">Contact Me</h1>
+    <div class="contact-wrapper">
+      <!-- Left Side: Contact Info -->
+      <div class="contact-left">
+        <div class="contact-info">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/paul-ochieng-139900319" target="_blank">LinkedIn</a>
+        </div>
+        <div class="contact-info">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/254111327936" target="_blank">WhatsApp: +254 111 327 936</a>
+        </div>
+        <div class="contact-info">
+          <i class="fab fa-instagram"></i>
+          <a href="https://instagram.com/paul_tyler192" target="_blank">Instagram: paul_tyler192</a>
+        </div>
+        <div class="contact-info">
+          <i class="fab fa-twitter"></i>
+          <a href="https://twitter.com/PaulOchien87781" target="_blank">X: Paul Ochieng</a>
+        </div>
+        <div class="contact-info">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:ochiengpaul193@gmail.com">Email: ochiengpaul193@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- Right Side: Contact Form -->
+      <div class="contact-right">
+        <form id="contact-form" action="/submit-form" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 
+    <!-- CV Download Button -->
+    <section id="cv">
+      <div class="container">
+        <a href="files/Paul_Ogonyo_CV.pdf" download class="btn">Download CV</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© 2025 Paul Ogonyo. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function openTab(tabName) {
+        // Remove active class from all tabs and tab links
+        let tabLinks = document.getElementsByClassName('tab-links');
+        let tabContents = document.getElementsByClassName('tab-contents');
+    
+        for (let link of tabLinks) {
+          link.classList.remove('active-link');
+        }
+    
+        for (let content of tabContents) {
+          content.classList.remove('active-tab');
+        }
+    
+        // Add active class to the clicked tab and content
+        document.getElementById(tabName).classList.add('active-tab');
+        event.currentTarget.classList.add('active-link');
+      }
+    </script>
+    
+  
   </body>
 </html>

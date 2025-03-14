@@ -1,121 +1,144 @@
-*{
-  marginm: 0;
+/* Global Styling */
+* {
+  margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;  
-  box-sizing: border-box ;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
-body{
+body {
   background: #080808;
   color: #fff;
 }
 
-#header{
+/* Header Section */
+#header {
   width: 100%;
   height: 100vh;
-  background-image: url(images\background.png);
-  background-size: cover; 
+  background-image: url('images/background.png');
+  background-size: cover;
   background-position: center;
 }
 
-.container{
+.container {
   padding: 10px 10%;
-
 }
 
-nav{
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.logo{
+.logo {
   width: 140px;
 }
 
-nav ul li{
-  display: inline-block;
+nav ul {
   list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
   margin: 10px 20px;
 }
 
-nav ul li a{
+nav ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
   position: relative;
+  transition: color 0.3s ease;
 }
 
-nav ul li a::after{
+/* Hover underline effect */
+nav ul li a::after {
   content: '';
-  width: 100%;
+  width: 0;
   height: 3px;
   background: #ff004f;
   position: absolute;
   left: 0;
   bottom: -6px;
   transition: 0.5s;
-
 }
 
-nav ul li a:hover::after{
+nav ul li a:hover::after {
   width: 100%;
 }
 
-.header-text{
-  margin-top: 20%;
-  font-size: 30px; 
+nav ul li a:hover {
+  color: #ff004f;
 }
 
-.header-text h1{
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+
+.header-text h1 {
   font-size: 60px;
   margin-top: 20px;
 }
 
-.header-text h1 span{
-  color: #ff004f ;
+.header-text h1 span {
+  color: #ff004f;
 }
 
-/* ---------about--------- */
-#about{
-  padding: flex;
+/* About Section */
+#about {
+  padding: 50px 0;
   color: #ababab;
+  margin-bottom: 0;
 }
-.row{
-  display:flex;
+
+.row {
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.about-col-1{
+
+.about-col-1 {
   flex-basis: 35%;
 }
-.about-col-1 img{
-  width: 100%;
-  height: 65%;
+
+.about-col-1 img {
+  width: 100%; 
+  height: 50%; /* Reduced by 25% from original 65% */
+  object-fit: cover; /* Ensures the image scales properly */
   border-radius: 15px;
 }
-.about-col-2{
+
+
+.about-col-2 {
   flex-basis: 60%;
 }
-.sub-title{
+
+.sub-title {
   font-size: 60px;
   font-weight: 600;
-  color:#fff;
+  color: #fff;
 }
-.tab-titles{
+
+/* Tab Titles */
+.tab-titles {
   display: flex;
   margin: 20px 0 40px;
 }
-.tab-links{
-  margin-right:50px;
+
+.tab-links {
+  margin-right: 50px;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
   position: relative;
+  color: #ababab;
+  transition: color 0.3s ease;
 }
-.tab-links::after{
-  content:'';
+
+.tab-links::after {
+  content: '';
   width: 0;
   height: 3px;
   background: #ff004f;
@@ -124,6 +147,221 @@ nav ul li a:hover::after{
   bottom: -8px;
   transition: 0.5s;
 }
-.tab-links.active::after{
+
+/* Active Tab Link */
+.tab-links.active-link {
+  color: #fff;
+}
+
+.tab-links.active-link::after {
   width: 50%;
+}
+
+/* Tab Content */
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+.tab-contents ul {
+  list-style: none;
+}
+
+.tab-contents ul li {
+  margin-bottom: 10px;
+}
+
+.tab-contents ul li span {
+  color: #ff004f;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-text {
+    margin-top: 40%;
+    font-size: 24px;
+  }
+
+  .header-text h1 {
+    font-size: 40px;
+  }
+
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+
+  .tab-links {
+    margin-right: 20px;
+    font-size: 16px;
+  }
+
+  nav ul li {
+    margin: 10px;
+  }
+}
+
+/* Services Section */
+#services {
+  padding: 50px 0;
+  background-color: #111;
+  margin-top: -200px;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+.service-card i {
+  font-size: 50px;
+  color: #ff004f;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.service-card h2 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Hover Effect */
+.service-card:hover {
+  transform: translateY(-10px);
+  background-color: #ff004f;
+}
+
+.service-card:hover i {
+  color: #fff;
+}
+
+.service-card:hover h2,
+.service-card:hover p {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-list {
+    flex-direction: column;
+  }
+
+  .service-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 0;
+  background-color: #111;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-left, .contact-right {
+  flex-basis: 48%;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-info i {
+  font-size: 24px;
+  color: #ff004f;
+  margin-right: 15px;
+}
+
+.contact-info a {
+  color: #ccc;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #ff004f;
+}
+
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.contact-right .btn {
+  padding: 12px;
+  background-color: #ff004f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.contact-right .btn:hover {
+  background-color: #ff3366;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-left, .contact-right {
+    flex-basis: 100%;
+  }
 }
